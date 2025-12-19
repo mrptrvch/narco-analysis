@@ -1,0 +1,222 @@
+[
+    {
+        "Country": "United States",
+        "Year": 1999,
+        "Overdose_Death_Rate_Total": 6.5,
+        "Any opioid death rates (CDC WONDER)": 2.9,
+        "Cocaine overdose death rates (CDC WONDER)": 1.4,
+        "Heroin overdose death rates (CDC WONDER)": 0.7,
+        "Synthetic opioids death rates (CDC WONDER)": 0.3,
+        "Prescription Opioids death rates (US CDC WONDER)": 1.2
+    },
+    {
+        "Country": "United States",
+        "Year": 2000,
+        "Overdose_Death_Rate_Total": 6.6,
+        "Any opioid death rates (CDC WONDER)": 3.0,
+        "Cocaine overdose death rates (CDC WONDER)": 1.3,
+        "Heroin overdose death rates (CDC WONDER)": 0.7,
+        "Synthetic opioids death rates (CDC WONDER)": 0.3,
+        "Prescription Opioids death rates (US CDC WONDER)": 1.3
+    },
+    {
+        "Country": "United States",
+        "Year": 2001,
+        "Overdose_Death_Rate_Total": 7.2,
+        "Any opioid death rates (CDC WONDER)": 3.3,
+        "Cocaine overdose death rates (CDC WONDER)": 1.3,
+        "Heroin overdose death rates (CDC WONDER)": 0.6,
+        "Synthetic opioids death rates (CDC WONDER)": 0.3,
+        "Prescription Opioids death rates (US CDC WONDER)": 1.7
+    },
+    {
+        "Country": "United States",
+        "Year": 2002,
+        "Overdose_Death_Rate_Total": 9.1,
+        "Any opioid death rates (CDC WONDER)": 4.1,
+        "Cocaine overdose death rates (CDC WONDER)": 1.6,
+        "Heroin overdose death rates (CDC WONDER)": 0.7,
+        "Synthetic opioids death rates (CDC WONDER)": 0.4,
+        "Prescription Opioids death rates (US CDC WONDER)": 2.3
+    },
+    {
+        "Country": "United States",
+        "Year": 2003,
+        "Overdose_Death_Rate_Total": 10.1,
+        "Any opioid death rates (CDC WONDER)": 4.5,
+        "Cocaine overdose death rates (CDC WONDER)": 1.8,
+        "Heroin overdose death rates (CDC WONDER)": 0.7,
+        "Synthetic opioids death rates (CDC WONDER)": 0.5,
+        "Prescription Opioids death rates (US CDC WONDER)": 2.6
+    },
+    {
+        "Country": "United States",
+        "Year": 2004,
+        "Overdose_Death_Rate_Total": 10.7,
+        "Any opioid death rates (CDC WONDER)": 4.7,
+        "Cocaine overdose death rates (CDC WONDER)": 1.9,
+        "Heroin overdose death rates (CDC WONDER)": 0.6,
+        "Synthetic opioids death rates (CDC WONDER)": 0.6,
+        "Prescription Opioids death rates (US CDC WONDER)": 2.9
+    },
+    {
+        "Country": "United States",
+        "Year": 2005,
+        "Overdose_Death_Rate_Total": 11.7,
+        "Any opioid death rates (CDC WONDER)": 5.1,
+        "Cocaine overdose death rates (CDC WONDER)": 2.1,
+        "Heroin overdose death rates (CDC WONDER)": 0.7,
+        "Synthetic opioids death rates (CDC WONDER)": 0.6,
+        "Prescription Opioids death rates (US CDC WONDER)": 3.2
+    },
+    {
+        "Country": "United States",
+        "Year": 2006,
+        "Overdose_Death_Rate_Total": 13.9,
+        "Any opioid death rates (CDC WONDER)": 5.9,
+        "Cocaine overdose death rates (CDC WONDER)": 2.5,
+        "Heroin overdose death rates (CDC WONDER)": 0.7,
+        "Synthetic opioids death rates (CDC WONDER)": 0.9,
+        "Prescription Opioids death rates (US CDC WONDER)": 3.9
+    },
+    {
+        "Country": "United States",
+        "Year": 2007,
+        "Overdose_Death_Rate_Total": 14.0,
+        "Any opioid death rates (CDC WONDER)": 6.1,
+        "Cocaine overdose death rates (CDC WONDER)": 2.2,
+        "Heroin overdose death rates (CDC WONDER)": 0.8,
+        "Synthetic opioids death rates (CDC WONDER)": 0.7,
+        "Prescription Opioids death rates (US CDC WONDER)": 4.2
+    },
+    {
+        "Country": "United States",
+        "Year": 2008,
+        "Overdose_Death_Rate_Total": 14.2,
+        "Any opioid death rates (CDC WONDER)": 6.4,
+        "Cocaine overdose death rates (CDC WONDER)": 1.7,
+        "Heroin overdose death rates (CDC WONDER)": 1.0,
+        "Synthetic opioids death rates (CDC WONDER)": 0.8,
+        "Prescription Opioids death rates (US CDC WONDER)": 4.3
+    },
+    {
+        "Country": "United States",
+        "Year": 2009,
+        "Overdose_Death_Rate_Total": 14.5,
+        "Any opioid death rates (CDC WONDER)": 6.6,
+        "Cocaine overdose death rates (CDC WONDER)": 1.4,
+        "Heroin overdose death rates (CDC WONDER)": 1.1,
+        "Synthetic opioids death rates (CDC WONDER)": 1.0,
+        "Prescription Opioids death rates (US CDC WONDER)": 4.4
+    },
+    {
+        "Country": "United States",
+        "Year": 2010,
+        "Overdose_Death_Rate_Total": 14.8,
+        "Any opioid death rates (CDC WONDER)": 6.8,
+        "Cocaine overdose death rates (CDC WONDER)": 1.3,
+        "Heroin overdose death rates (CDC WONDER)": 1.0,
+        "Synthetic opioids death rates (CDC WONDER)": 1.0,
+        "Prescription Opioids death rates (US CDC WONDER)": 4.7
+    },
+    {
+        "Country": "United States",
+        "Year": 2011,
+        "Overdose_Death_Rate_Total": 15.9,
+        "Any opioid death rates (CDC WONDER)": 7.3,
+        "Cocaine overdose death rates (CDC WONDER)": 1.5,
+        "Heroin overdose death rates (CDC WONDER)": 1.4,
+        "Synthetic opioids death rates (CDC WONDER)": 0.8,
+        "Prescription Opioids death rates (US CDC WONDER)": 4.9
+    },
+    {
+        "Country": "United States",
+        "Year": 2012,
+        "Overdose_Death_Rate_Total": 16.0,
+        "Any opioid death rates (CDC WONDER)": 7.4,
+        "Cocaine overdose death rates (CDC WONDER)": 1.4,
+        "Heroin overdose death rates (CDC WONDER)": 1.9,
+        "Synthetic opioids death rates (CDC WONDER)": 0.8,
+        "Prescription Opioids death rates (US CDC WONDER)": 4.5
+    },
+    {
+        "Country": "United States",
+        "Year": 2013,
+        "Overdose_Death_Rate_Total": 17.6,
+        "Any opioid death rates (CDC WONDER)": 7.9,
+        "Cocaine overdose death rates (CDC WONDER)": 1.6,
+        "Heroin overdose death rates (CDC WONDER)": 2.7,
+        "Synthetic opioids death rates (CDC WONDER)": 1.0,
+        "Prescription Opioids death rates (US CDC WONDER)": 4.4
+    },
+    {
+        "Country": "United States",
+        "Year": 2014,
+        "Overdose_Death_Rate_Total": 20.5,
+        "Any opioid death rates (CDC WONDER)": 9.0,
+        "Cocaine overdose death rates (CDC WONDER)": 1.7,
+        "Heroin overdose death rates (CDC WONDER)": 3.4,
+        "Synthetic opioids death rates (CDC WONDER)": 1.8,
+        "Prescription Opioids death rates (US CDC WONDER)": 4.6
+    },
+    {
+        "Country": "United States",
+        "Year": 2015,
+        "Overdose_Death_Rate_Total": 24.4,
+        "Any opioid death rates (CDC WONDER)": 10.4,
+        "Cocaine overdose death rates (CDC WONDER)": 2.1,
+        "Heroin overdose death rates (CDC WONDER)": 4.1,
+        "Synthetic opioids death rates (CDC WONDER)": 3.1,
+        "Prescription Opioids death rates (US CDC WONDER)": 4.7
+    },
+    {
+        "Country": "United States",
+        "Year": 2016,
+        "Overdose_Death_Rate_Total": 32.8,
+        "Any opioid death rates (CDC WONDER)": 13.3,
+        "Cocaine overdose death rates (CDC WONDER)": 3.2,
+        "Heroin overdose death rates (CDC WONDER)": 4.9,
+        "Synthetic opioids death rates (CDC WONDER)": 6.2,
+        "Prescription Opioids death rates (US CDC WONDER)": 5.2
+    },
+    {
+        "Country": "United States",
+        "Year": 2017,
+        "Overdose_Death_Rate_Total": 38.3,
+        "Any opioid death rates (CDC WONDER)": 14.9,
+        "Cocaine overdose death rates (CDC WONDER)": 4.3,
+        "Heroin overdose death rates (CDC WONDER)": 4.9,
+        "Synthetic opioids death rates (CDC WONDER)": 9.0,
+        "Prescription Opioids death rates (US CDC WONDER)": 5.2
+    },
+    {
+        "Country": "United States",
+        "Year": 2018,
+        "Overdose_Death_Rate_Total": 38.2,
+        "Any opioid death rates (CDC WONDER)": 14.6,
+        "Cocaine overdose death rates (CDC WONDER)": 4.5,
+        "Heroin overdose death rates (CDC WONDER)": 4.7,
+        "Synthetic opioids death rates (CDC WONDER)": 9.9,
+        "Prescription Opioids death rates (US CDC WONDER)": 4.5
+    },
+    {
+        "Country": "United States",
+        "Year": 2019,
+        "Overdose_Death_Rate_Total": 40.4,
+        "Any opioid death rates (CDC WONDER)": 15.5,
+        "Cocaine overdose death rates (CDC WONDER)": 4.9,
+        "Heroin overdose death rates (CDC WONDER)": 4.4,
+        "Synthetic opioids death rates (CDC WONDER)": 11.4,
+        "Prescription Opioids death rates (US CDC WONDER)": 4.2
+    },
+    {
+        "Country": "United States",
+        "Year": 2020,
+        "Overdose_Death_Rate_Total": 54.2,
+        "Any opioid death rates (CDC WONDER)": 21.4,
+        "Cocaine overdose death rates (CDC WONDER)": 6.0,
+        "Heroin overdose death rates (CDC WONDER)": 4.1,
+        "Synthetic opioids death rates (CDC WONDER)": 17.8,
+        "Prescription Opioids death rates (US CDC WONDER)": 4.9
+    }
+]
