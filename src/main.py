@@ -12,7 +12,7 @@ csv_url = "https://ourworldindata.org/grapher/drug-overdose-death-rates.csv?v=1&
 response = requests.get(csv_url, headers=headers)
 
 if response.status_code == 200:
-    with open("../drug_overdoses_raw.csv", "wb") as f:
+    with open("../narco-analysis/data/raw/drug_overdoses_raw.csv", "wb") as f:
         f.write(response.content)
     print("CSV файл скачан успешно: drug_overdoses_raw.csv")
 else:
@@ -21,7 +21,7 @@ else:
     exit()
 
 # Читаем CSV
-df = pd.read_csv("../drug_overdoses_raw.csv")
+df = pd.read_csv("../narco-analysis/data/raw/drug_overdoses_raw.csv")
 
 # Выводим колонки (для проверки)
 print("\nКолонки в данных:")
@@ -74,7 +74,7 @@ print(latest_data)
 # Сохраняем в JSON (за последний год)
 data_to_save = latest_data.to_dict(orient='records')
 
-with open("../overdose_statistics_rates.json", "w", encoding='utf-8') as json_file:
+with open("../narco-analysis/data/processed/overdose_statistics_rates.json", "w", encoding='utf-8') as json_file:
     json.dump(data_to_save, json_file, indent=4, ensure_ascii=False)
 
 print("\nДанные за последний год сохранены в overdose_statistics_rates.json")
@@ -83,7 +83,7 @@ print("\nДанные за последний год сохранены в overd
 full_data = countries[['Country', 'Year', 'Overdose_Death_Rate_Total'] + rate_columns].round(2)
 
 full_json = full_data.to_dict(orient='records')
-with open("../overdose_full_history_rates.json", "w", encoding='utf-8') as f:
+with open("../narco-analysis/data/processed/overdose_full_history_rates.json", "w", encoding='utf-8') as f:
     json.dump(full_json, f, indent=4, ensure_ascii=False)
 
 print("Полные исторические данные сохранены в overdose_full_history_rates.json")

@@ -5,7 +5,8 @@ __pycache__/
 
 data/
 *.csv
-
+.idea
+/DS_Store
 # C extensions
 *.so
 
