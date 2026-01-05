@@ -2,33 +2,36 @@ import requests
 import pandas as pd
 import json
 
-# Заголовок для обхода блокировки
+# Header to bypass potential blocking by the website
 headers = {'User-Agent': 'Our World In Data data fetch/1.0'}
 
-# рабочий URL на CSV (death rates по типам передозировок)
+# Direct URL to the CSV file (death rates by overdose types)
 csv_url = "https://ourworldindata.org/grapher/drug-overdose-death-rates.csv?v=1&csvType=filtered&useColumnShortNames=true&overlay=download-data"
 
-# Скачиваем CSV
+# Download the CSV file
 response = requests.get(csv_url, headers=headers)
-overdose_full_history_rates_path = "../data/processed/overdose_full_history_rates.json"
-drug_overdoses_raw_path = "../data/raw/drug_overdoses_raw.csv"
+
+# Define file paths as constants
+OVERDOSE_FULL_HISTORY_RATES_PATH = "../data/processed/overdose_full_history_rates.json"
+DRUG_OVERDOSES_RAW_PATH = "../data/raw/drug_overdoses_raw.csv"
+
 if response.status_code == 200:
-    with open(drug_overdoses_raw_path, "wb") as f:
+    with open(DRUG_OVERDOSES_RAW_PATH, "wb") as f:
         f.write(response.content)
-    print("CSV файл скачан успешно: drug_overdoses_raw.csv")
+    print("CSV file downloaded successfully: drug_overdoses_raw.csv")
 else:
-    print(f"Ошибка скачивания: {response.status_code}")
+    print(f"Download error: {response.status_code}")
     print(response.text[:500])
     exit()
 
-# Читаем CSV
-df = pd.read_csv(drug_overdoses_raw_path)
+# Read the CSV file
+df = pd.read_csv(DRUG_OVERDOSES_RAW_PATH)
 
-# Выводим колонки (для проверки)
-print("\nКолонки в данных:")
+# Print column names (for verification)
+print("\nColumns in the data:")
 print(df.columns.tolist())
 
-# Колонки со ставками смертности (rates per 100,000)
+# Columns containing death rates (per 100,000 population)
 rate_columns = [
     'Any opioid death rates (CDC WONDER)',
     'Cocaine overdose death rates (CDC WONDER)',
@@ -37,30 +40,31 @@ rate_columns = [
     'Prescription Opioids death rates (US CDC WONDER)'
 ]
 
-# Проверяем наличие колонок
+# Check if all required columns are present
 missing_cols = [col for col in rate_columns if col not in df.columns]
 if missing_cols:
-    print(f"Отсутствуют колонки: {missing_cols}")
+    print(f"Missing columns: {missing_cols}")
     exit()
 
-# Суммируем ставки для общей оценки передозировок
+# Sum the rates to get a total overdose death rate estimate
 df['Overdose_Death_Rate_Total'] = df[rate_columns].sum(axis=1)
 
-# Переименовываем для удобства
+# Rename columns for convenience
 df = df.rename(columns={
     'Entity': 'Country',
     'Year': 'Year'
 })
 
-# Фильтруем только страны (убираем World и другие агрегаты; в этих данных в основном USA)
+# Filter to keep only individual countries (remove World and other aggregates; data is mostly for USA)
 countries = df[~df['Country'].str.contains('World|Income|Europe|Africa|Asia|Americas|Oceania|OECD|WHO', na=False, case=False)]
 
-# Полная история
+# Full historical dataset
 full_data = countries[['Country', 'Year', 'Overdose_Death_Rate_Total'] + rate_columns].round(2)
 
+# Convert to list of dictionaries and save as JSON
 full_json = full_data.to_dict(orient='records')
-with open(overdose_full_history_rates_path, "w", encoding='utf-8') as f:
+with open(OVERDOSE_FULL_HISTORY_RATES_PATH, "w", encoding='utf-8') as f:
     json.dump(full_json, f, indent=4, ensure_ascii=False)
 
-print("Полные исторические данные сохранены в overdose_full_history_rates.json")
-print("Готово! Теперь код работает с твоими колонками и суммирует ставки.")
+print("Full historical data saved to overdose_full_history_rates.json")
+print("Done! The code now works with your columns and sums the rates.")
