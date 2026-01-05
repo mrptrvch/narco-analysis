@@ -6,4 +6,4 @@
 ## Запуск
 python src/main.py
 
-#### загруженные данные сохраняются в data/raw, обработанные данные - в json файл data/processed/
+загруженные данные сохраняются в data/raw, обработанные — в json файл data/processed/

@@ -10,9 +10,10 @@ csv_url = "https://ourworldindata.org/grapher/drug-overdose-death-rates.csv?v=1&
 
 # Скачиваем CSV
 response = requests.get(csv_url, headers=headers)
-
+overdose_full_history_rates_path = "../data/processed/overdose_full_history_rates.json"
+drug_overdoses_raw_path = "../data/raw/drug_overdoses_raw.csv"
 if response.status_code == 200:
-    with open("/Users/mac/PycharmProjects/narco-analysis/data/raw/drug_overdoses_raw.csv", "wb") as f:
+    with open(drug_overdoses_raw_path, "wb") as f:
         f.write(response.content)
     print("CSV файл скачан успешно: drug_overdoses_raw.csv")
 else:
@@ -21,7 +22,7 @@ else:
     exit()
 
 # Читаем CSV
-df = pd.read_csv("/Users/mac/PycharmProjects/narco-analysis/data/raw/drug_overdoses_raw.csv")
+df = pd.read_csv(drug_overdoses_raw_path)
 
 # Выводим колонки (для проверки)
 print("\nКолонки в данных:")
@@ -54,12 +55,11 @@ df = df.rename(columns={
 # Фильтруем только страны (убираем World и другие агрегаты; в этих данных в основном USA)
 countries = df[~df['Country'].str.contains('World|Income|Europe|Africa|Asia|Americas|Oceania|OECD|WHO', na=False, case=False)]
 
-
 # Полная история
 full_data = countries[['Country', 'Year', 'Overdose_Death_Rate_Total'] + rate_columns].round(2)
 
 full_json = full_data.to_dict(orient='records')
-with open("/Users/mac/PycharmProjects/narco-analysis/data/processed/overdose_full_history_rates.json", "w", encoding='utf-8') as f:
+with open(overdose_full_history_rates_path, "w", encoding='utf-8') as f:
     json.dump(full_json, f, indent=4, ensure_ascii=False)
 
 print("Полные исторические данные сохранены в overdose_full_history_rates.json")
